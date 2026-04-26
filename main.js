@@ -104,7 +104,7 @@ function buildAppShell() {
               <a href="#" id="logoutBtn"><i class="bi bi-box-arrow-right"></i> Logout</a>
             </div>
           </div>
-          <span class="nav-lang-btn">EN <i class="bi bi-chevron-down caret"></i></span>
+      
           <span class="nav-notification"><i class="bi bi-bell-fill"></i></span>
         </div>
       </div>
