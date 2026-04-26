@@ -30,12 +30,12 @@ INSERT INTO vehicles (plate_number, make, model, year, color, vin, status, milea
 ON CONFLICT (plate_number) DO NOTHING;
 
 INSERT INTO maintenance_schedules (vehicle_id, maintenance_type, scheduled_date, status, notes, cost) VALUES
-  ((SELECT id FROM vehicles WHERE plate_number = 'JKL-3456'), 'Replace Driver', '2026-04-15', 'scheduled', 'Regular 10K service', 150.00),
-  ((SELECT id FROM vehicles WHERE plate_number = 'EFG-6802'), 'Accident', '2026-04-10', 'in_progress', 'Front brake pads replacement', 450.00),
-  ((SELECT id FROM vehicles WHERE plate_number = 'MNO-7890'), 'Early Termination', '2026-04-20', 'scheduled', 'All four tires', 80.00),
-  ((SELECT id FROM vehicles WHERE plate_number = 'VWX-3579'), 'Extend Agreement', '2026-04-25', 'scheduled', '50K km major service', 800.00),
-  ((SELECT id FROM vehicles WHERE plate_number = 'ABC-1234'), 'Replacement', '2026-05-01', 'scheduled', 'AC compressor check', 300.00),
-  ((SELECT id FROM vehicles WHERE plate_number = 'STU-2468'), 'Replacement', '2026-04-18', 'completed', 'Regular service completed', 120.00);
+  ((SELECT id FROM vehicles WHERE plate_number = 'JKL-3456'), 'Oil Change', '2026-04-15', 'scheduled', 'Regular 10K service', 150.00),
+  ((SELECT id FROM vehicles WHERE plate_number = 'EFG-6802'), 'Brake Inspection', '2026-04-10', 'in_progress', 'Front brake pads replacement', 450.00),
+  ((SELECT id FROM vehicles WHERE plate_number = 'MNO-7890'), 'Tire Rotation', '2026-04-20', 'scheduled', 'All four tires', 80.00),
+  ((SELECT id FROM vehicles WHERE plate_number = 'VWX-3579'), 'Full Service', '2026-04-25', 'scheduled', '50K km major service', 800.00),
+  ((SELECT id FROM vehicles WHERE plate_number = 'ABC-1234'), 'AC Repair', '2026-05-01', 'scheduled', 'AC compressor check', 300.00),
+  ((SELECT id FROM vehicles WHERE plate_number = 'STU-2468'), 'Oil Change', '2026-04-18', 'completed', 'Regular service completed', 120.00);
 
 INSERT INTO replacement_requests (vehicle_id, reason, priority, status, requested_by, notes) VALUES
   ((SELECT id FROM vehicles WHERE plate_number = 'JKL-3456'), 'Engine performance issues', 'high', 'pending', 'Fleet Manager', 'Vehicle showing reduced performance'),
