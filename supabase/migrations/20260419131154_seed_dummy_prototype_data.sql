@@ -55,13 +55,13 @@ SELECT 'INV-2024-089', a.id, a.client_name, 9600, 1440, 11040, DATE '2024-09-15'
 
 WITH v AS (SELECT id, plate_number FROM vehicles)
 INSERT INTO maintenance_schedules (vehicle_id, maintenance_type, scheduled_date, status, notes, cost)
-SELECT v.id, 'Replace Driver', DATE '2025-05-10', 'scheduled', 'Regular 10,000 km service', 350 FROM v WHERE plate_number='JKL-5678'
+SELECT v.id, 'Oil Change', DATE '2025-05-10', 'scheduled', 'Regular 10,000 km service', 350 FROM v WHERE plate_number='JKL-5678'
 UNION ALL
-SELECT v.id, 'Accident', DATE '2025-05-15', 'scheduled', 'All four tires', 120 FROM v WHERE plate_number='ABC-1234'
+SELECT v.id, 'Tire Rotation', DATE '2025-05-15', 'scheduled', 'All four tires', 120 FROM v WHERE plate_number='ABC-1234'
 UNION ALL
-SELECT v.id, 'Early Termination', DATE '2025-04-28', 'completed', 'Passed inspection', 200 FROM v WHERE plate_number='DEF-3456'
+SELECT v.id, 'Brake Inspection', DATE '2025-04-28', 'completed', 'Passed inspection', 200 FROM v WHERE plate_number='DEF-3456'
 UNION ALL
-SELECT v.id, 'Extend Agreement', DATE '2025-06-01', 'scheduled', 'Annual service', 1200 FROM v WHERE plate_number='MNO-6789';
+SELECT v.id, 'Full Service', DATE '2025-06-01', 'scheduled', 'Annual service', 1200 FROM v WHERE plate_number='MNO-6789';
 
 WITH v AS (SELECT id, plate_number FROM vehicles)
 INSERT INTO replacement_requests (vehicle_id, reason, priority, status, requested_by, notes)
