@@ -303,7 +303,7 @@ export async function renderDashboard() {
 
         <h2 class="section-title">Quick Actions</h2>
         <div class="row g-3 mb-5">
-          <div class="col-6 col-md-4 col-lg-2"><a href="#" class="quick-action-card" data-page="vehicle-request"><i class="bi bi-plus-circle-fill"></i><span>New Vehicle Request</span></a></div>
+        
           <div class="col-6 col-md-4 col-lg-2"><a href="#" class="quick-action-card" data-page="replacement"><i class="bi bi-arrow-repeat"></i><span>Replacement</span></a></div>
           <div class="col-6 col-md-4 col-lg-2"><a href="#" class="quick-action-card" data-page="maintenance"><i class="bi bi-wrench-adjustable"></i><span>Maintenance</span></a></div>
           <div class="col-6 col-md-4 col-lg-2"><a href="#" class="quick-action-card" data-page="quotations"><i class="bi bi-calculator-fill"></i><span>Quotation</span></a></div>
