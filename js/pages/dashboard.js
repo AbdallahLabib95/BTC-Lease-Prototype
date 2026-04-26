@@ -273,7 +273,7 @@ export async function renderDashboard() {
             </div>
           </div>
         </div>
-
+<!--
         <h2 class="section-title">Service Reminders</h2>
         <div class="data-card mb-5">
           <div style="display:flex;justify-content:flex-end;padding:16px 16px 0">
@@ -300,7 +300,7 @@ export async function renderDashboard() {
             <div class="pagination-links"><a>Previous</a><a>Next</a></div>
           </div>
         </div>
-
+-->
         <h2 class="section-title">Quick Actions</h2>
         <div class="row g-3 mb-5">
         
